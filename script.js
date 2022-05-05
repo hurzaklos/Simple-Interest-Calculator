@@ -7,10 +7,16 @@ function compute(){
     var years = document.getElementById("years").value;
     var amount = principal * years * rate / 100;
     var year = new Date().getFullYear()+parseInt(years);
-    document.getElementById("result").innerHTML = "If you deposit <mark>"
-   + principal + "</mark>, <br/> at an interest rate of <mark>"
-   + rate +"%.</mark><br/> You will receive an amount of <mark>" + amount +
-   "</mark>,<br/>in the year <mark>" + year+ ".</mark><br/>";   
+    if (principal <= 0) {
+        alert("Enter a non-zero or a positive number");
+        document.getElementById("principal").focus();
+    }else{
+        document.getElementById("result").innerHTML = "If you deposit <mark>"
+        + principal + "</mark>, <br/> at an interest rate of <mark>"
+        + rate +"%.</mark><br/> You will receive an amount of <mark>" + amount +
+        "</mark>,<br/>in the year <mark>" + year+ ".</mark><br/>";  
+    }
+     
 }
 /*
   This function shows and updates the % field near the scrolling bar
@@ -26,7 +32,7 @@ function updateRate(){
 */
 function checkAmount() {
     var principal = document.getElementById("principal").value;
-    if (principal <= 0 || principal == 'null') {
+    if (principal <= 0) {
         alert("Enter a non-zero or a positive number");
         document.getElementById("principal").focus();
     }
