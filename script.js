@@ -1,7 +1,5 @@
 /*
-  The declared values are here in the compute function
-  The computation for the result has also been declared to get the result for the recieved amount
-  The years need to be modified and has been declaired to get the full year to compute it properly
+  This function calculates the amount of money you would generate over the years and the rate you selected.
  */
 function compute(){
     var principal = document.getElementById("principal").value;
@@ -14,7 +12,9 @@ function compute(){
    + rate +"%.</mark><br/> You will receive an amount of <mark>" + amount +
    "</mark>,<br/>in the year <mark>" + year+ ".</mark><br/>";   
 }
-
+/*
+  This function shows and updates the % field near the scrolling bar
+ */
 function updateRate(){
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval+"%";

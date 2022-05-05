@@ -8,7 +8,7 @@
     <body>
         <div class="maindiv">
             <h1>Simple Interest Calculator</h1>
-            <!--This shows the amount where the user inputs a number and the corresponding 
+            <!--The user inputs a number and the corresponding 
             textbox's id is principal. The checkAmount function is to check the amount whether
             the inputted text is a positive number or not-->
             Amount <input type="number" id="principal" onchange="checkAmount()">  
@@ -17,8 +17,8 @@
             called rate. The min value is 1 while the max is 20 and the default is 10.25. The
             updateRate function is to update the scroller's indicated number as the user uses 
             the scroller-->
-            Rate <input type="range" id="rate" min="1" max="20" step="0.25" value="9" onchange="updateRate(this.value)">  
-            <span id="rate_val">9%</span>
+            Rate <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate(this.value)">  
+            <span id="rate_val">10.25%</span>
             <br>
             <!--This is to show the number of years the user can select. It is viewed as a dropdown
             and the user can select from 1-10 years-->
