@@ -26,7 +26,7 @@ function updateRate(){
 */
 function checkAmount() {
     var principal = document.getElementById("principal").value;
-    if (principal <= 0 || principal == '') {
+    if (principal <= 0 || principal == 'null') {
         alert("Enter a non-zero or a positive number");
         document.getElementById("principal").focus();
     }
